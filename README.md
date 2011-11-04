@@ -1,17 +1,18 @@
 # Convert a Java Web Application to Launch with Jetty Runner
 
+## Prerequisites
+
+* Basic Java knowledge, including an installed version of the JVM and Maven.
+* Basic Git knowledge, including an installed version of Git.
+* A Java web application. If you don't have one follow the first step to create an example. Otherwise skip that step.
+
+### What is Jetty and Jetty Runner?
 Jetty is a lightweight Java application server that offers a flexible array of options for how it can be launched. One popular option is using embedded Jetty the way that the [java quickstart](http://devcenter.heroku.com/java) does. Another good option is the Jetty Runner jar file. Each version of Jetty that is released includes a Jetty Runner jar. This jar can be run directly from the java command and can be passed a war file to load right on the command line. An example of this would be:
 
     :::term
     $ java -jar jetty-runner.jar application.war
 
 Jetty Runner will then launch a Jetty instance with the given war deployed to it.
-
-## Prerequisites
-
-* Basic Java knowledge, including an installed version of the JVM and Maven.
-* Basic Git knowledge, including an installed version of Git.
-* A Java web application. If you don't have one follow the first step to create an example. Otherwise skip that step.
 
 ## Create an application if you don't already have one
 
