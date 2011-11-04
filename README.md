@@ -25,11 +25,6 @@ Jetty Runner will then launch a Jetty instance with the given war deployed to it
     
 (you can pick any groupId or artifactId). You now have a complete Java web app in the `helloworld` directory.
 
-If you want to skip the conversion steps and start with an app that already uses Jetty Runner you can clone the finished sample and then skip to the 'Deploy Your Application to Heroku' section:
-
-    :::term
-    $ git clone git@github.com:heroku/devcenter-jetty-runner.git
-
 ## Configure Maven to Download Jetty Runner
 
 Although not necessary for using Jetty Runner it's a good idea to have your build tool download Jetty Runner for you since your application will need it to run. You could, of course, just download Jetty Runner and use it to launch your application without doing this. However having all of your dependencies defined in your build descriptor is important for application portability and repeatability of deployment. In this case we're using Maven so we'll use the dependency plugin to download the jar. Add the following plugin configuration to your pom.xml:
@@ -55,6 +50,11 @@ Although not necessary for using Jetty Runner it's a good idea to have your buil
             </execution>
         </executions>
     </plugin>
+
+If you want to skip project setup  steps and start with an app that already uses Jetty Runner you can clone the finished sample and then skip to the 'Deploy Your Application to Heroku' section:
+
+    :::term
+    $ git clone git@github.com:heroku/devcenter-jetty-runner.git
 
  
 ## Run your Application
