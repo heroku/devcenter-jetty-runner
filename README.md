@@ -29,27 +29,33 @@ Jetty Runner will then launch a Jetty instance with the given war deployed to it
 
 Although not necessary for using Jetty Runner it's a good idea to have your build tool download Jetty Runner for you since your application will need it to run. You could, of course, just download Jetty Runner and use it to launch your application without doing this. However having all of your dependencies defined in your build descriptor is important for application portability and repeatability of deployment. In this case we're using Maven so we'll use the dependency plugin to download the jar. Add the following plugin configuration to your pom.xml:
 
-    <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>2.3</version>
-        <executions>
-            <execution>
-                <phase>package</phase>
-                <goals><goal>copy</goal></goals>
-                <configuration>
-                    <artifactItems>
-                        <artifactItem>
-                            <groupId>org.mortbay.jetty</groupId>
-                            <artifactId>jetty-runner</artifactId>
-                            <version>7.5.4.v20111024</version>
-                            <destFileName>jetty-runner.jar</destFileName>
-                        </artifactItem>
-                    </artifactItems>
-                </configuration>
-            </execution>
-        </executions>
-    </plugin>
+    <build>
+        ...
+        <plugins>
+            ...    
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.3</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals><goal>copy</goal></goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.mortbay.jetty</groupId>
+                                    <artifactId>jetty-runner</artifactId>
+                                    <version>7.5.4.v20111024</version>
+                                    <destFileName>jetty-runner.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 ## Start with a pre-built app that uses Jetty Runner
 
