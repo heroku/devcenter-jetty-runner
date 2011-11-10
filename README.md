@@ -1,4 +1,4 @@
-# Convert a Java Web Application to Launch with Jetty Runner
+# Deploy a Java Web Application that launches with Jetty Runner
 
 ## Prerequisites
 
@@ -59,7 +59,7 @@ Although not necessary for using Jetty Runner it's a good idea to have your buil
 
 ## Run your Application
 
-To generate the start scripts simply run:
+To build your application simply run:
 
     :::term
     $ mvn package
@@ -69,7 +69,7 @@ And then run your app using the java command:
     :::term
     $ java -jar target/dependency/jetty-runner.jar target/*.war
 
-That's it. Your application should start up on port 8080 and is now more portable and erosion resistant!
+That's it. Your application should start up on port 8080.
 
 # Deploy your Application to Heroku
 
