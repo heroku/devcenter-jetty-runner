@@ -57,14 +57,6 @@ Although not necessary for using Jetty Runner it's a good idea to have your buil
         </plugins>
     </build>
 
-## Start with a pre-built app that uses Jetty Runner
-
-If you want to skip project setup  steps and start with an app that already uses Jetty Runner you can clone the finished sample and then skip to the 'Deploy Your Application to Heroku' section:
-
-    :::term
-    $ git clone git@github.com:heroku/devcenter-jetty-runner.git
-
- 
 ## Run your Application
 
 To generate the start scripts simply run:
