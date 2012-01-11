@@ -40,7 +40,7 @@
                             <artifactItem>
                                 <groupId>heroku.runner</groupId>
                                 <artifactId>tomcat-runner</artifactId>
-                                <version>0.0.3</version>
+                                <version>0.0.4</version>
                                 <destFileName>tomcat-runner.jar</destFileName>
                             </artifactItem>
                         </artifactItems>
