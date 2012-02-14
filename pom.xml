@@ -12,7 +12,7 @@
     <repository>
       <id>tomcat-runner-repo</id>
       <name>tomcat runner repository on GitHub</name>
-      <url>http://jsimone.github.com/tomcat-runner/repository/</url>
+      <url>http://jsimone.github.com/webapp-runner/repository/</url>
     </repository>
   </repositories>
 
@@ -38,8 +38,8 @@
                     <configuration>
                         <artifactItems>
                             <artifactItem>
-                                <groupId>tomcat.runner</groupId>
-                                <artifactId>tomcat-runner</artifactId>
+                                <groupId>webapp.runner</groupId>
+                                <artifactId>webapp-runner</artifactId>
                                 <version>0.0.5</version>
                                 <destFileName>tomcat-runner.jar</destFileName>
                             </artifactItem>
