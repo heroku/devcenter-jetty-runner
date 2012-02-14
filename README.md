@@ -135,3 +135,9 @@ Congratulations! Your web app should now be up and running on Heroku. Open it in
 
     :::term  
     $ heroku open
+
+## Clone the Source
+
+If you want to skip the creation steps you can clone the finished sample:
+
+    $ git clone git@github.com:heroku/devcenter-jetty-runner.git
