@@ -1,8 +1,6 @@
-Follow each step to build an app from scratch, or skip to the end get the source for this article. You can also use almost any existing Maven webapp project.
+# Deploy a Java Web Application that launches with Jetty Runner
 
-<div class="note" markdown="1">
-If you have questions about Java on Heroku, consider discussing them in the [Java on Heroku forums](https://discussion.heroku.com/category/java).
-</div>
+Follow each step to build an app from scratch, or skip to the end get the source for this article. You can also use almost any existing Maven webapp project.
 
 ## Prerequisites
 
@@ -36,33 +34,33 @@ Although not necessary for using Jetty Runner it's a good idea to have your buil
 
 ```xml
 <build>
+  ...
+  <plugins>
     ...
-        <plugins>
-	        ...
-		        <plugin>
-			            <groupId>org.apache.maven.plugins</groupId>
-				                <artifactId>maven-dependency-plugin</artifactId>
-						            <version>2.3</version>
-							                <executions>
-									                <execution>
-											                    <phase>package</phase>
-													                        <goals><goal>copy</goal></goals>
-																                    <configuration>
-																		                            <artifactItems>
-																					                                <artifactItem>
-																									                                <groupId>org.mortbay.jetty</groupId>
-																													                                <artifactId>jetty-runner</artifactId>
-																																	                                <version>9.3.3.v20150827</version>
-																																					                                <destFileName>jetty-runner.jar</destFileName>
-																																									                            </artifactItem>
-																																												                            </artifactItems>
-																																															                        </configuration>
-																																																		                </execution>
-																																																				            </executions>
-																																																					            </plugin>
-																																																						        </plugins>
-																																																							</build>
-																																																							```
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-dependency-plugin</artifactId>
+      <version>2.3</version>
+      <executions>
+        <execution>
+          <phase>package</phase>
+          <goals><goal>copy</goal></goals>
+          <configuration>
+            <artifactItems>
+              <artifactItem>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-runner</artifactId>
+                <version>9.3.3.v20150827</version>
+                <destFileName>jetty-runner.jar</destFileName>
+              </artifactItem>
+            </artifactItems>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+</build>
+```
 
 ## Run your application
 
