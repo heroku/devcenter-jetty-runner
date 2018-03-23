@@ -88,18 +88,6 @@ You declare how you want your application executed in `Procfile` in the project 
 web: java $JAVA_OPTS -jar target/dependency/jetty-runner.jar --port $PORT target/*.war
 ```
 
-## Optionally choose a JDK
-
-By default, OpenJDK 1.8 is installed with your app. However, you can choose to use a newer JDK by specifying `java.runtime.version=1.7` in the `system.properties` file.
-
-Here's what a `system.properties` file looks like:
-
-```
-java.runtime.version=1.7
-```
-
-You can specify 1.6, 1.7, or 1.8 (1.8 is in beta) for Java 6, 7, or 8 (with lambdas), respectively.
-
 ## Deploy to Heroku
 
 Commit your changes to Git:
@@ -158,12 +146,4 @@ Congratulations! Your web app should now be up and running on Heroku. Open it in
 
 ```term
 $ heroku open
-```
-
-## Clone the source
-
-If you want to skip the creation steps you can clone the finished sample:
-
-```term
-$ git clone git@github.com:heroku/devcenter-jetty-runner.git
 ```
