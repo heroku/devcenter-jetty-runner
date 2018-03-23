@@ -40,7 +40,7 @@ Although not necessary for using Jetty Runner it's a good idea to have your buil
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-dependency-plugin</artifactId>
-      <version>2.3</version>
+      <version>2.4</version>
       <executions>
         <execution>
           <phase>package</phase>
@@ -48,15 +48,15 @@ Although not necessary for using Jetty Runner it's a good idea to have your buil
           <configuration>
             <artifactItems>
               <artifactItem>
-                <groupId>org.mortbay.jetty</groupId>
+                <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-runner</artifactId>
-                <version>9.3.3.v20150827</version>
+                <version>9.4.9.v20180320</version>
                 <destFileName>jetty-runner.jar</destFileName>
               </artifactItem>
             </artifactItems>
           </configuration>
         </execution>
-      </executions>
+       </executions>
     </plugin>
   </plugins>
 </build>
